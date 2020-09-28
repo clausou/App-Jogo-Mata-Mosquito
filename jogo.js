@@ -25,13 +25,14 @@ function posicaoRandomica() {
 	//CRIAR O ELEMENTO HTMAL DE FORMA PROGRAMADA
 	var mosquito = document.createElement('img')
 	mosquito.src = 'imagens/mosquito.png'
-	mosquito.className = tamanhoAleatorio()
+		//CONCATENAÇÃO DO ESPAÇÃO PARA QUE O INTERPRETADOR ENTENDA QUE SÃO DUAS CLASSES DIFERENTES, E NÃO UMA STRING
+	mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
 	mosquito.style.left = posicaoX + 'px'
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
 
 	document.body.appendChild(mosquito)
-	console.log(tamanhoAleatorio())
+	console.log(ladoAleatorio())
 }
 
 //CRIAR MOSQUITOS DE TAMANHOS ALEATÓRIOS
@@ -50,7 +51,16 @@ function tamanhoAleatorio() {
 	}
 }
 
+//POSICIONAMENTO ALEATÓRIA - ESPELHAMENTO DA FIGURA PARA DAR MAIOR DINÁMICA AO JOGO
 
+function ladoAleatorio() {
+	var classe = Math.floor(Math.random() * 2)
+	
+	switch(classe) {
+		case 0:
+			return 'ladoA'
 
-
-
+		case 1:
+			return 'ladoB'
+	}
+}

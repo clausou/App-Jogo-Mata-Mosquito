@@ -12,3 +12,12 @@
 	width: 90px;
 	height: 90px;
 }
+
+/*A CLASSE .ladoA NÃO SE FAZ NECESSÁRIO UMA VEZ QUE É A POSIÇÃO REAL DA FIGURA, MENSURADA SOMENTE PARA FINS DIDÁTICOS*/
+.ladoA {
+	transform: scaleX(1);
+}
+
+.ladoB {
+	transform: scaleX(-1);
+}
